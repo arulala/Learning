@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- one id and many names -->
+	<!-- The scope is by default singleton then all objects set during loading, 
+		prototype creates when user access it and diff objects for each user -->
+	<!-- Inner bean if the object is used only by the enclosing -->
+	<bean id="teaCompany1" class="com.wipro.Spring.TeaCompany">
+		<property name="flavours">
+			<list>
+				<value>light</value>
+				<value>dark</value>
+			</list>
+		</property>
+		<property name="teaPrice" value="10" />
+		<property name="teaProductName" value="TetleyBlue" />
+	</bean>
+	<!-- Outer bean used in the reference -->
+	<bean id="teaCompany2" class="com.wipro.Spring.TeaCompany">
+		<property name="flavours">
+			<list>
+				<value>light</value>
+				<value>dark</value>
+			</list>
+		</property>
+		<property name="teaPrice" value="5" />
+		<property name="teaProductName" value="Tetley" />
+	</bean>
+	<!-- alternate name -->
+	<alias name="teaFlavour" alias="teaFav" />
+	<bean id="teaFlavour" class="com.wipro.Spring.TeaFlavourCompany"
+		name="teaFlav" scope="prototype">
+		<property name="flavour" value="light" />
+		<property name="teaCompany">
+			<list>
+				<ref bean="teaCompany1" />
+				<ref bean="teaCompany2" />
+			</list>
+		</property>
+	 </bean>
+		<!-- The autowire=byType, byName, constructor , the default is OFF allows 
+			for property setting automatically by the member name and xml bean id, or 
+			type matching but there should be only one matching type -->
+		<!-- A list , map or set of property can also be intialised here like, 
+			<list> <ref bean="teaCompany" /> <ref bean=""teaCompany2" /> <list> We can 
+			give list of integer also here but instead of "ref" we should mention "value" -->
+
+
+
+		<!-- Two ways to set dependancy injection constructor and setter -->
+		<!-- <property name="teaCompany" value="TajMahal"/> -->
+		<!-- No name attribute in constructor just follow the order -->
+		<!-- <constructor-arg type="java.lang.String" value="TajMahal"/> -->
+
+
+
+
+</beans>

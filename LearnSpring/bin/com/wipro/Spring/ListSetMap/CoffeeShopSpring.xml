@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="ListSetMap" class="com.wipro.Spring.ListSetMap.TestListSetBean">
+   <property name="coffeeFlavours">
+      <list>
+        <value>instant</value>
+        <value>latte</value>
+        <value>capucino</value>
+        <value>capucino</value>
+      </list>
+   </property>
+   <property name="brandNames">
+      <set>
+         <value>BRU</value>
+         <value>Nescafe</value>
+         <value>Sunrise</value>
+         <value>Sunrise</value>
+      </set>
+   </property>
+   <property name="coffeeShopPlaces">
+      <map>
+         <entry key="Barista" value="Halifax"/>
+         <entry key="CoffeeShop" value="Leeds"/>
+      </map>
+   
+   </property>
+</bean>
+</beans>
+    

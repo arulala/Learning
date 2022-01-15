@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"       
+	   xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    <bean id="spCollTest" class="com.wipro.Spring.SpecificCollection.SpecificCollectionBean">
+    <property name="coffeeFlavours">
+      <util:list list-class="java.util.Vector">
+        <value>instant</value>
+        <value>latte</value>
+        <value>capucino</value>
+        <value>capucino</value>
+      </util:list>    
+    </property>
+    <property name="brandNames">
+       <util:set set-class="java.util.TreeSet">
+          <value>BRU</value>
+         <value>Nescafe</value>
+         <value>Sunrise</value>
+         <value>Sunrise</value>
+       </util:set>
+    </property>
+    <property name="coffeeShopPlaces">
+       <util:map map-class="java.util.HashMap">
+         <entry key="Barista" value="Halifax"/>
+         <entry key="CoffeeShop" value="Leeds"/>
+       </util:map>
+    </property>
+    </bean>
+    
+</beans>
