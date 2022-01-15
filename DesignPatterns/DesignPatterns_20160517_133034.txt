@@ -1,0 +1,2 @@
+ERROR - 13:30:34: org.xml.sax.SAXParseExceptionpublicId: /DesignPatterns/.settings/org.eclipse.jdt.core.prefs; systemId: file:///DesignPatterns/.settings/org.eclipse.jdt.core.prefs; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+ERROR - 13:30:34: org.xml.sax.SAXParseExceptionpublicId: /DesignPatterns/.settings/org.eclipse.jdt.core.prefs; systemId: file:///DesignPatterns/.settings/org.eclipse.jdt.core.prefs; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
